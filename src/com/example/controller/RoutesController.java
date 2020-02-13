@@ -7,10 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class HelloController {
+public class RoutesController {
     @GetMapping("/")
     public String index(Model m) {
-        m.addAttribute("message", "Hello Cesar");
+        m.addAttribute("message", "Hello world!");
         return "index";
+    }
+
+    @GetMapping("/login")
+    public String login(Model m) {
+        m.addAttribute("message", "This is the login page.");
+        return "login";
     }
 }
