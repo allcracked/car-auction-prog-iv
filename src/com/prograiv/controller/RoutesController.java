@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.prograiv.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,9 +14,8 @@ public class RoutesController {
         return "index";
     }
 
-    @GetMapping("/login")
-    public String login(Model m) {
-        m.addAttribute("message", "This is the login page.");
-        return "login";
+    @GetMapping("/favicon.ico")
+    String favicon() {
+        return "forward:/rsc/images/favicon.ico";
     }
 }
